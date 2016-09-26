@@ -14,12 +14,14 @@ if (!Module[installedMarker]) {
             var firstSlash = request.indexOf('/');
             var targetPackageName = firstSlash === -1 ? request : request.substring(0, firstSlash);
 
-            var currentPackage = lassoPackageRoot.getRootPackage(parent.filename);
-            if (currentPackage && (targetPackageName === '~' || currentPackage.name === targetPackageName)) {
-                var actualRequest = firstSlash === -1 ?
-                    currentPackage.__dirname :
-                    currentPackage.__dirname + request.substring(firstSlash);
-                return oldResolveFilename.call(this, actualRequest, parent, isMain);
+            if (targetPackageName === '~') {
+                var packagetDir = lassoPackageRoot.getRootDir(parent.filename);
+                if (packagetDir) {
+                    var actualRequest = firstSlash === -1 ?
+                        packagetDir :
+                        packagetDir + request.substring(firstSlash);
+                    return oldResolveFilename.call(this, actualRequest, parent, isMain);
+                }
             }
         }
 
