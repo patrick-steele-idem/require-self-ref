@@ -19,7 +19,7 @@ require('../../../../../../util/bar');
 And _with_ `require-self-ref` installed:
 
 ```javascript
-require('my-package/src/util/bar');
+require('~/src/util/bar');
 ```
 
 :smile:
@@ -47,6 +47,7 @@ require('require-self-ref');
 # Related projects:
 
 - [app-module-path](https://github.com/patrick-steele-idem/app-module-path-node) - Simple module to add additional directories to the Node module search for top-level app modules
+- [wavy](https://github.com/kolodny/wavy) - Similar to this package, but requires a `postinstall` script and symbolic links
 
 # License
 

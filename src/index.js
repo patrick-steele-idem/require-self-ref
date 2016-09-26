@@ -13,8 +13,9 @@ if (!Module[installedMarker]) {
         if (request.charAt(0) !== '.') {
             var firstSlash = request.indexOf('/');
             var targetPackageName = firstSlash === -1 ? request : request.substring(0, firstSlash);
+
             var currentPackage = lassoPackageRoot.getRootPackage(parent.filename);
-            if (currentPackage && currentPackage.name === targetPackageName) {
+            if (currentPackage && (targetPackageName === '~' || currentPackage.name === targetPackageName)) {
                 var actualRequest = firstSlash === -1 ?
                     currentPackage.__dirname :
                     currentPackage.__dirname + request.substring(firstSlash);
