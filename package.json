@@ -1,6 +1,6 @@
 {
   "name": "require-self-ref",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Solves the relative path problem in Node.js by allowing a require call to reference the current package",
   "main": "src/index.js",
   "scripts": {
