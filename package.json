@@ -1,0 +1,38 @@
+{
+  "name": "require-self-ref",
+  "version": "1.0.0",
+  "description": "Solves the relative path problem in Node.js by allowing a require call to reference the current package",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "npm run mocha && npm run jshint",
+    "mocha": "mocha --ui bdd --reporter spec ./test",
+    "jshint": "jshint src/"
+  },
+  "keywords": [
+    "require",
+    "relative",
+    "path",
+    "resolve"
+  ],
+  "author": "Patrick Steele-Idem <pnidem@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "jshint": "^2.9.3",
+    "mocha": "^3.0.2"
+  },
+  "dependencies": {
+    "lasso-package-root": "^1.0.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrick-steele-idem/require-self-ref.git"
+  },
+  "bugs": {
+    "url": "https://github.com/patrick-steele-idem/require-self-ref/issues"
+  },
+  "homepage": "https://github.com/patrick-steele-idem/require-self-ref#readme"
+}
