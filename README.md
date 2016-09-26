@@ -40,7 +40,7 @@ require('require-self-ref');
 
 # Important
 
-- Your package must have a `package.json` file at the root and that `package.json` file must with a `"name"` property
+- Your package must have a `package.json` file at the root and that `package.json` file must have a `"name"` property
 - ***Use at your own risk*** (this package monkey-patches the Node.js require system and it depends on internals of Node.js that may change in the future)
 - Compatible with all versions of Node.js
 
