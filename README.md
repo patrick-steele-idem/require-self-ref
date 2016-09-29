@@ -1,7 +1,7 @@
 require-self-ref
 ================
 
-Solves the relative path problem in Node.js by allowing a `require` call to be a path relative to the root directory of the containing package:
+Solves the relative path problem in Node.js by allowing the target module argument of a `require` call to be relative to the root directory of the containing package:
 
 For example:
 
